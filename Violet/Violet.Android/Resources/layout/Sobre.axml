@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="Sobre"
+        android:layout_width="match_parent"
+        android:layout_height="25.5dp"
+        android:id="@+id/textView1"
+        android:gravity="center" />
+    <TextView
+        android:text="Projeto Violeta,  2018 Versão 1.0"
+        android:layout_width="match_parent"
+        android:layout_height="41.5dp"
+        android:id="@+id/textView2"
+        android:layout_marginBottom="39.0dp"
+        android:gravity="center" />
+    <TextView
+        android:text="Sobre Desenvolvedores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center" />
+    <TextView
+        android:text="Breno Peçanha, Evelyn Bueno, Hítalo Furtado, Vinícius Hernech  Ygor Brandão"
+        android:layout_width="match_parent"
+        android:layout_height="120.5dp"
+        android:id="@+id/textView3"
+        android:gravity="center" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Por favor, insira suas informações. Elas serão de grande importância para nós."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <TextView
+                android:text="Seu nome"
+                android:layout_column="0"
+                android:id="@+id/textView14" />
+            <EditText
+                android:inputType="textPersonName"
+                android:layout_column="1"
+                android:id="@+id/nameText1"
+                android:layout_width="245.5dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <TextView
+                android:text="Seu telefone"
+                android:layout_column="0"
+                android:id="@+id/textView15" />
+            <EditText
+                android:inputType="phone"
+                android:layout_column="1"
+                android:id="@+id/telephoneText1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text="Seu email"
+                android:layout_column="0"
+                android:id="@+id/textView16" />
+            <EditText
+                android:inputType="textEmailAddress"
+                android:layout_column="1"
+                android:id="@+id/emailText1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">
+            <TextView
+                android:text="Seu endereço"
+                android:layout_column="0"
+                android:id="@+id/textView17" />
+            <EditText
+                android:layout_column="1"
+                android:id="@+id/adressText1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5">
+            <TextView
+                android:text="CEP"
+                android:layout_column="0"
+                android:id="@+id/textView18" />
+            <EditText
+                android:inputType="textPostalAddress"
+                android:layout_column="1"
+                android:id="@+id/CEPText1" />
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:text="Confirmar dados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitButton1" />
+</LinearLayout>

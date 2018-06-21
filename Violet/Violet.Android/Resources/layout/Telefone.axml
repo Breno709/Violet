@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Telefones Úteis"
+        android:layout_width="match_parent"
+        android:layout_height="33.0dp"
+        android:id="@+id/textView1"
+        android:gravity="center"
+        android:layout_marginBottom="11.5dp" />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout1"
+        android:paddingLeft="10dp">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <TextView
+                android:text="Central de Atendimento à Mulher"
+                android:layout_column="0"
+                android:id="@+id/textView14"
+                android:layout_width="227.5dp" />
+            <TextView
+                android:text="180"
+                android:layout_column="1"
+                android:id="@+id/textView19" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <TextView
+                android:text="Disque Denúncia"
+                android:layout_column="0"
+                android:id="@+id/textView18" />
+            <TextView
+                android:text="181"
+                android:layout_column="1"
+                android:id="@+id/textView20" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7">
+            <TextView
+                android:text="Central de Valorização à Vida"
+                android:layout_column="0"
+                android:id="@+id/textView30" />
+            <TextView
+                android:text="188"
+                android:layout_column="1"
+                android:id="@+id/textView31" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text="Polícia Militar"
+                android:layout_column="0"
+                android:id="@+id/textView15"
+                android:layout_marginLeft="0.0dp" />
+            <TextView
+                android:text="190"
+                android:layout_column="1"
+                android:id="@+id/textView21" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">
+            <TextView
+                android:text="Serviço de Atendimento Móvel de Urgência - SAMU"
+                android:layout_column="0"
+                android:id="@+id/textView17"
+                android:layout_width="337.0dp" />
+            <TextView
+                android:text="192"
+                android:layout_column="1"
+                android:id="@+id/textView23" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6">
+            <TextView
+                android:text="Corpo de Bombeiros"
+                android:layout_column="0"
+                android:id="@+id/textView26" />
+            <TextView
+                android:text="193"
+                android:layout_column="1"
+                android:id="@+id/textView27" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
