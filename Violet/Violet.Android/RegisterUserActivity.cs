@@ -30,6 +30,7 @@ namespace Violet.Droid
             RetrieveControls();
 
             button1.Click += Button1_Click;
+            if (UserData.HasData) RetrieveData();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -58,6 +59,16 @@ namespace Violet.Droid
         private void GoToMainPage()
         {
             StartActivity(typeof(MainActivity));
+        }
+
+        private void RetrieveData()
+        {
+            var pessoa = UserData.GetUserData();
+            nomeText.Text = pessoa.Nome;
+            telefoneText.Text = pessoa.Telefone;
+            emailText.Text = pessoa.Email;
+            enderecoText.Text = pessoa.Endereco;
+            cepText.Text = pessoa.CEP;
         }
     }
 }

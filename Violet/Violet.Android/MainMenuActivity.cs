@@ -12,10 +12,10 @@ using Android.Widget;
 
 namespace Violet.Droid
 {
-    [Activity(Label = "MainMenuActivity")]
+    [Activity(Label = "MainMenuActivity", Icon = "@mipmap/icon", Theme = "@style/MainTheme")]
     public class MainMenuActivity : Activity
     {
-        Button usuario, telefone, registros, sobre;
+        Button usuario, telefone, protegidos, registros, sobre;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +28,7 @@ namespace Violet.Droid
         {
             usuario = FindViewById<Button>(Resource.Id.MainMenu_UserBT);
             telefone = FindViewById<Button>(Resource.Id.MainMenu_TelephonesBT);
+            protegidos = FindViewById<Button>(Resource.Id.MainMenu_ProtectedsBT);
             registros = FindViewById<Button>(Resource.Id.MainMenu_RegistersBT);
             sobre = FindViewById<Button>(Resource.Id.MainMenu_AboutBT);
         }
@@ -36,8 +37,15 @@ namespace Violet.Droid
         {
             usuario.Click += Usuario_Click;
             telefone.Click += Telefone_Click;
+            protegidos.Click += Protegidos_Click;
             registros.Click += Registros_Click;
             sobre.Click += Sobre_Click;
+        }
+
+        private void Protegidos_Click(object sender, EventArgs e)
+        {
+            ProtectedsActivity.TipoListagem = ListingMode.Protegidos;
+            StartActivity(typeof(ProtectedsActivity));
         }
 
         private void Sobre_Click(object sender, EventArgs e)
@@ -47,7 +55,8 @@ namespace Violet.Droid
 
         private void Registros_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ProtectedsActivity.TipoListagem = ListingMode.Registros;
+            StartActivity(typeof(ProtectedsActivity));
         }
 
         private void Telefone_Click(object sender, EventArgs e)

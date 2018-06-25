@@ -1,6 +1,7 @@
 ﻿using System;
-
+using System.Timers;
 using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
@@ -14,7 +15,8 @@ namespace Violet.Droid
     [Activity(Label = "Violet", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        ImageButton gotoMenu, callHelp;
+        Button gotoMenu, callHelp;
+        Timer temporizador = null;
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -31,12 +33,14 @@ namespace Violet.Droid
         /// </summary>
         void InitApp()
         {
+            
             //Se há dados de usuário armanezado no dispositivo, o aplicativo inicaliza no modo padrão.Caso contrário, abre-se um formulário de dados.
             if (Persist_Storage.UserData.HasData)
             {
                 SetContentView(Resource.Layout.MainPage);
                 RetrieveControls();
                 SetButtons();
+                SetTimer();
             }
             else
             {
@@ -46,8 +50,8 @@ namespace Violet.Droid
 
         private void RetrieveControls()
         {
-            gotoMenu = FindViewById<ImageButton>(Resource.Id.imageButton1);
-            callHelp = FindViewById<ImageButton>(Resource.Id.imageButton2);
+            gotoMenu = FindViewById<Button>(Resource.Id.MP_MenuBT);
+            callHelp = FindViewById<Button>(Resource.Id.MP_HelpBT);
         }
 
         private void SetButtons()
@@ -56,31 +60,32 @@ namespace Violet.Droid
             callHelp.Click += CallHelp_Click;
         }
 
+        Random intervaloRandomico = new Random();
+        private void SetTimer()
+        {
+            temporizador = new Timer();
+            temporizador.Interval = intervaloRandomico.Next(15000, 180000);
+            temporizador.Elapsed += Temporizador_Elapse;
+            temporizador.Start();
+        }
+
+        private void Temporizador_Elapse(object sender, ElapsedEventArgs e)
+        {
+            temporizador.Interval = intervaloRandomico.Next(60000, 210000);
+            StartActivity(typeof(HelpCallActivity));
+        }
+
         private void CallHelp_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var localDataEditor = Application.Context.GetSharedPreferences(UDDEF.SPFILE, FileCreationMode.Private).Edit();
+
+            localDataEditor.Clear();
+            localDataEditor.Commit();
         }
 
         private void GotoMenu_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(MainMenuActivity));
-        }
-    }
-
-    public class ListTest : ListActivity
-    {
-
-        string[] teste;
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            teste = new string[] { "maca", "banana", "acabate", "beterrada"};
-            ListAdapter = new ArrayAdapter<string>(this, Resource.Layout.Registros, teste);
-        }
-
-        protected override void OnListItemClick(ListView l, View v, int position, long id)
-        {
-            base.OnListItemClick(l, v, position, id);
         }
     }
 }

@@ -7,7 +7,8 @@
         android:text="Por favor, insira suas informações. Elas serão de grande importância para nós."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1"
+        android:layout_marginLeft="9.5dp" />
     <TableLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -74,5 +75,7 @@
         android:text="Confirmar dados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/submitButton1" />
+        android:id="@+id/submitButton1"
+        android:background="#ff016a97"
+        android:textColor="#fffdfdfd" />
 </LinearLayout>

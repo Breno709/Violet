@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
+  <style name="VioletSimply" parent="MainTheme.Base">
+  </style>
+  
   <style name="MainTheme" parent="MainTheme.Base">
+    <item name="android:textColorPrimary">#46074F</item>
+    <item name="android:windowBackground">@color/violetBack</item>
+    <item name="android:colorAccent">#E018FF</item>
+    
   </style>
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -16,7 +23,7 @@
     <item name="colorPrimaryDark">#1976D2</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-    <item name="colorAccent">#FF4081</item>
+    <item name="colorAccent">#990AE8</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>

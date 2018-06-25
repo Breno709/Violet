@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="CHAMADA DE AJUDA"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:gravity="center" />
+    <TextView
+        android:text="Você está recebendo um pedido de ajuda da pessoa abaixo. É prudente contatá-la ou avisar autoridades locais sobre possível emergência."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="22.5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="54.0dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:background="#fff37300"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="Nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HP_NameTV"
+                android:textColor="#ffffffff" />
+            <TextView
+                android:text="Telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/HP_TelephoneTV"
+                android:layout_marginLeft="30.0dp"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+        <TextView
+            android:text="Endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HP_AdressTV"
+            android:textColor="#ffffffff" />
+    </LinearLayout>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HP_ObsMT"
+        android:hint="Adicionar Observacao" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="26.0dp">
+            <Button
+                android:text="Telefones"
+                android:layout_width="112.0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/HP_TelephoneBT"
+                android:background="#ff975ff0"
+                android:layout_marginRight="6.5dp" />
+            <Button
+                android:text="Atender pedido"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/HP_OkayBT"
+                android:layout_gravity="right"
+                android:background="#ffff3970"
+                android:textColor="#fffbf8f8" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

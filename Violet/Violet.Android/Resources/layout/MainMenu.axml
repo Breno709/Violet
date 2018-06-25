@@ -14,6 +14,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/MainMenu_TelephonesBT" />
     <Button
+        android:text="Protegidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MainMenu_ProtectedsBT" />
+    <Button
         android:text="Registros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

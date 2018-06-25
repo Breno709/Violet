@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Violet.Droid
 {
-    [Activity(Label = "TelephoneActivity")]
+    [Activity(Label = "TelephoneActivity", Icon = "@mipmap/icon", Theme = "@style/MainTheme")]
     public class TelephoneActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

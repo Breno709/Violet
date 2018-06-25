@@ -3,16 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageButton
-        android:src="@android:drawable/ic_menu_gallery"
+    <Button
+        android:text="MENU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton1"
+        android:id="@+id/MP_MenuBT"
         android:layout_gravity="right" />
-    <ImageButton
-        android:src="@android:drawable/ic_menu_gallery"
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:layout_gravity="bottom" />
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <Button
+            android:text="AJUDA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MP_HelpBT"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="13.5dp"
+            android:background="#ffa750fb"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
 </LinearLayout>

@@ -17,7 +17,7 @@ namespace Violet.Droid
     public class UserDataBoardActivity : Activity
     {
         TextView nome, telefone, endereco, cep, email;
-        ImageView qrcode;
+        Button editData;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,6 +33,14 @@ namespace Violet.Droid
             email = FindViewById<TextView>(Resource.Id.UserDB_emailTV);
             endereco = FindViewById<TextView>(Resource.Id.UserDB_AdressTV);
             cep = FindViewById<TextView>(Resource.Id.UserDB_CEPTV);
+            editData = FindViewById<Button>(Resource.Id.UserDB_EditDataTB);
+
+            editData.Click += EditData_Click;
+        }
+
+        private void EditData_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(RegisterUserActivity));
         }
 
         private void LoadData()
